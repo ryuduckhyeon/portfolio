@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/portfolio/rwd-web/static/css/main.ce224798.css",
+    "main.js": "/portfolio/rwd-web/static/js/main.1c63edb8.js",
+    "index.html": "/portfolio/rwd-web/index.html",
+    "main.ce224798.css.map": "/portfolio/rwd-web/static/css/main.ce224798.css.map",
+    "main.1c63edb8.js.map": "/portfolio/rwd-web/static/js/main.1c63edb8.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ce224798.css",
+    "static/js/main.1c63edb8.js"
+  ]
+}
