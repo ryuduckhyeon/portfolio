@@ -209,8 +209,3 @@ $(function () {
   });
 });
 
-
-
-  if (/Mobi|Android|iPhone/i.test(navigator.userAgent)) {
-    window.location.href = "https://ryuduckhyeon.github.io/portfolio/portfolio/m/"; // 모바일 전용 페이지 주소
-  }
