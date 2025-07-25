@@ -51,30 +51,6 @@ $(function () {
   });
 });
 
-// scrolltrigger를 gsap애니메이션에 등록
-
-$(function () {
-  gsap
-    .timeline({
-      scrollTrigger: {
-        scrub: 1,
-        trigger: "#video",
-        start: "0% 80%",
-        end: "100% 100%",
-        // markers:true
-      },
-    })
-    .fromTo(
-      "#video",
-      { "clip-path": "inset(50% 50% 50% 50% round 30%)" },
-      {
-        "clip-path": "inset(0% 0% 0% 0% round 0%)",
-        ease: "easeOutBounce",
-        duration: 5,
-      },
-      0
-    );
-
   gsap
     .timeline({
       scrollTrigger: {
@@ -152,55 +128,6 @@ $(function () {
     .to("#work .tit .left", { x: "-100%", ease: "none", duration: 5 }, 0)
     .to("#work .tit .right", { x: "100%", ease: "none", duration: 5 }, 0);
 
-  gsap
-    .timeline({
-      scrollTrigger: {
-        scrub: 2,
-        trigger: "#join .txtbox .mask span",
-        start: "0% 60%",
-        end: "100% 20%",
-        // markers:true
-      },
-    })
-    .fromTo(
-      "#join .txtbox .mask span",
-      { backgroundSize: "0% 100%" },
-      { backgroundSize: "100% 100%" },
-      0
-    );
-
-  gsap
-    .timeline({
-      scrollTrigger: {
-        scrub: 2,
-        trigger: "#joineg .txtbox span",
-        start: "0% 60%",
-        end: "100% 20%",
-        // markers:true
-      },
-    })
-    .fromTo(
-      "#joineg .txtbox .mask span",
-      { backgroundSize: "0% 100%" },
-      { backgroundSize: "100% 100%" },
-      0
-    );
-
-  // contact화면에 들어오면 line 그리기
-  //     gsap.timeline({
-  //     scrollTrigger:{
-  //         scrub:2,
-  //         trigger:"#contact",
-  //         start:"0% 20%",
-  //         end:"100% 100%",
-  //         markers:true
-  //     }
-
-  // })
-  // .fromTo("#contact .textwrap .line",{width:0,ease:'linear,duration:3'},
-  //     {width:'95%',ease:'linear',deration:3},0)
-
-});
 
 $(function () {
   $(".top").click(function () {
@@ -208,4 +135,3 @@ $(function () {
     $("body,html").animate({ scrollTop: 0 }, 1000);
   });
 });
-

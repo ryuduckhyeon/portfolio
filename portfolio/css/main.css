@@ -262,17 +262,29 @@ header.on .m_btn span:nth-child(3) {
   display: flex;
   flex-direction: column;
   gap: 32px;
+  position: relative;
 }
-#profile .inner .contents .p_left .imgbox {
+#profile .inner .contents .p_left>.imgbox {
   width: 100%;
   height: 280px;
+  position: absolute;
+  top: 20%;
+  left: 0;
+  transform: translateY(-50%);
+  background: url(../images/14.JPG) no-repeat center center;
+  background-size: contain;
+  text-indent: -9999px;
 }
 #profile .inner .contents .p_left .imgbox img {
   width: 100%;
   height: 100%;
 }
 #profile .inner .contents .p_left ul.info{
-    border-left:5px solid var(--other_color)
+    border-left:5px solid var(--other_color);
+    position: absolute;
+    bottom: 5%;
+    left: 0;
+    transform: translateY(-50%);
 }
 #profile .inner .contents .p_left ul.info li {
   color: var(--other_color);
@@ -284,14 +296,12 @@ header.on .m_btn span:nth-child(3) {
   padding-left: 32px;
 }
 #profile .inner .contents .p_right{
-    width: 820px;
-    /* background: GOLD; */
+    width: 880px;
 }
 #profile .inner .contents .p_right .experience{
     display:flex;
-    justify-content: space-between;
     align-items: flex-start;
-   /*  */
+    gap: 30px;
 } 
 .p_right .experience h3,
 .p_right h3
@@ -300,69 +310,66 @@ header.on .m_btn span:nth-child(3) {
 font-size: 32px;
 font-weight: 600;
 }
-.p_right .experience ul.career li,
-.p_right .experience ul.edu li
-{
+.p_right>.experience>.experience_wrap{
+  display: flex;
+  flex-direction: column;
+  width: 120%;
+}
+.p_right .experience>.experience_wrap>ul{
     color:var(--other_color);
     opacity: 0.5;
     margin-bottom: 24px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
 }
 .p_right .skill_wrap{
-  display:flex;
   gap: 145px;
 }
+.p_right>.skill_wrap>.list{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
 .p_right .skill_wrap ul.list li{
+  width: 33%;
   display:flex;
+  flex-direction: column;
   gap:32px;
   color:var(--other_color);
   opacity: 0.5;
   margin-bottom: 24px;
   align-items: center;
+  text-align: center;
 }
 .p_right .skill_wrap ul.list li .tit{
   width: 100px;
+  text-align: center;
+  color: var(--text_color);
 }
 .p_right .skill_wrap ul.list li .gage{
-  width: 363px;
-  height: 10px;
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
   background: var(--main_background_color);
-  position: relative;
 }
-.p_right .skill_wrap ul.list li .gage .gagein{
-  position: absolute;
-  width: 95%;
-  height: 10px;
-  background: var(--profile_color);
+#html{
+  background-image: conic-gradient(var(--profile_color) 90%, var(--main_background_color) 10%);
 }
-.p_right .skill_wrap ul.list li:nth-child(3) .gage .gagein{
-  width: 75%;
-} 
-.p_right .skill_wrap ul.list li:nth-child(4) .gage .gagein{
-  width: 80%;
+#css{
+  background-image: conic-gradient(var(--profile_color) 90%, var(--main_background_color) 10%);
 }
-
-.p_right .skill_wrap ul.list li:nth-child(5) .gage .gagein{
-  width: 80%;
+#js{
+  background-image: conic-gradient(var(--profile_color) 75%, var(--main_background_color) 25%);
 }
-.p_right .skill_wrap ul.list li:last-child .gage .gagein{
-  width: 1%;
+#jquery{
+  background-image: conic-gradient(var(--profile_color) 75%, var(--main_background_color) 25%);
 }
-
-/* 비디오 영역 */
-#video{
-  width: 100%;
-  height: 100vh;
-  background: var(--main_background_color);
-  position: relative;
+#react{
+  background-image: conic-gradient(var(--profile_color) 70%, var(--main_background_color) 30%);
 }
-#video .video_wrap video{
-  width: 100%;
-  height: 100vh;
-  /* 가로 세로 비율 깨지지 않게 */
-  object-fit: cover;
-  position: absolute;
-  left: 0;
-  top: 0;
+#node{
+  background-image: conic-gradient(var(--profile_color) 5%, var(--main_background_color) 5%);
 }
 
 /* 작품영역 work */
@@ -433,36 +440,6 @@ font-weight: 600;
   color:var(--text_color);
   font-size:18px;
 }
-/* 입사 각오 */
-#join,#joineg{
-  width: 100%;
-  height: 300vh;
-  background: var(--main_background_color);
-  overflow: hidden;
-  display:flex;
-  padding-left: 60px;
-}
-#join .txtbox,#joineg .txtbox{
-  font-size:50px;
-  line-height: 1.2;
-}
-
-#join .txtbox .mask span,
-#joineg .txtbox .mask span
-{
-  -webkit-text-fill-color: transparent;
-  opacity: 0.2;
-  /* 배경크립을 텍스트로 제한하여 글자 마스크처리해주는 명령 */
-  -webkit-background-clip: text;
-  background-repeat: no-repeat;
-  background-image: linear-gradient(#000,#000);
-  background-size: 0% 100%;
-}
-#joineg{
-  justify-content: flex-end;
-}
-
-
 /* 코딩 작품  */
 .section{
   width: 100%;
@@ -616,23 +593,15 @@ font-weight: 600;
 #contact .copy .sns{
   display:flex;
   gap:10px;
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
 }
-#contact .copy .sns li:first-child a{
-  display:block;
-  width: 40px;
-  height: 40px;
-  background: url("../images/coding/icon_sns_02.png") no-repeat;
-  background-position-x: -40px;
-  background-size: 80px 40px;
-  text-indent: -99999px;
-}
-#contact .copy .sns li:last-child a{
-  display:block;
-  width: 40px;
-  height: 40px;
-  background: url("../images/coding/icon_sns_02.png") no-repeat;
-  background-size: 80px 40px;
-  text-indent: -99999px;
+#contact .copy>.sns>button{
+  font-size: 60px;
+  color: #000;
+  cursor: pointer !important;
+  z-index: 900;
 }
 
 /* 위로 버튼 */
@@ -640,84 +609,38 @@ font-weight: 600;
   position: absolute;
   right: 100px;
   bottom: 200px;
-  z-index: 999;
+  z-index: 800;
 }
 #contact .top img{
   width:70px;
 }
 
-/* loop */
-#loop,#loop2{
+
+#contact>#kakao_sns{
   width: 100%;
-  height: 100vh;
+  height: 100%;
+  z-index: 900;
+  margin: auto;
+  background: #000;
   position: relative;
-  background: var(--main_background_color);
+  display: none;
 }
-#loop .txtloop,
-#loop2 .txtloop
-{
-  width: 100%;
+#kakao_sns>.img{
+  height: 100%;
+  margin: auto;
+  background: url(../images/kakaotalk_qr.JPG) no-repeat center center;
+}
+#contact>#kakao_sns>.close{
+  width: 80px;
+  height: 40px;
+  border: 1px solid #00c9c8;
+  cursor: pointer;
+  background: red;
   position: absolute;
-  left: 0;
-  bottom: 10%;
-  overflow: hidden;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
 }
-#loop .txtloop ul,
-#loop2 .txtloop ul
-{
-  display:flex;
-  white-space: nowrap;
-  font-size:50px;
-  letter-spacing: -2px;
-  border-top: 1px solid var(--other_color);
-  border-bottom: 1px solid var(--other_color);
-  box-sizing: border-box;
-
+.show{
+  display: block !important;
 }
-#loop .txtloop ul li{
-  padding: 0 30px;
-  animation: text_ani 0.5s ease-in-out infinite ;
-}
-@keyframes text_ani{
-  0%{transform: translateX(0);}
-  100%{transform: translateX(-100%);}
-}
-
-#loop2 .txtloop{
-  bottom: 0;
-}
-#loop2 .txtloop ul li{
-  padding: 0 30px;
-  animation: text2_ani 0.5s ease-in-out infinite ;
-}
-@keyframes text2_ani{
-  0%{transform: translateX(0);}
-  100%{transform: translateX(100%);}
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
