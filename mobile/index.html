@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile</title>
+    <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=search" />
+  <link rel="stylesheet" href="../css/all.css">
+  <link rel="stylesheet" href="../css/color.css">
+  <link rel="stylesheet" href="../css/main.css" />
+  <link rel="alternate" media="only screen and (max-width: 767px)" href="./m/">
+</head>
+<body>
+    <!-- header영역 -->
+  <header>
+    <h1>
+      <a href="../"><span class="en">Ydh</span>PortFolio</a>
+    </h1>
+    <div class="navi_wrap">
+      <nav class="gnb">
+        <ul>
+          <li><a href="../">Intro</a></li>
+          <li><a href="#work1">Work1</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="m_btn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </header>
+
+  <section id="intro" class="animate" data-animate="motion">
+    <div class="intro_txt">
+      <p class="tit">WebPublisher</p>
+      <p class="tit">Front End Developer</p>
+      <p class="tit2">PORTFOLIO</p>
+    </div>
+    <div class="subtxt">
+      <p>"Bringing Thoughts to Life Through Interfaces."</p>
+    </div>
+    <!-- 가로라인 -->
+    <svg class="line1" width="1920" height="1" viewBox="0 0 1920 1" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <line y1="0.5" x2="1920" y2="0.5" stroke="white" class="line-draw" />
+    </svg>
+    <!-- 세로라인 -->
+    <svg class="line2" width="1" height="1024" viewBox="0 0 1 1024" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <line x1="0.5" x2="0.5" y2="1024" stroke="white" class="line-draw2" />
+    </svg>
+    <!-- 아래로 유도하는 버튼 -->
+    <div class="scroll">
+      <img src="../images/cta.png" alt="아래로 스크롤" />
+    </div>
+  </section>
+
+        <!-- 작업물1 -->
+     <section class="section" id="work1"> 
+      <div class="wrap">
+        <div class="contents">
+          <div class="imgbox">
+            <img src="../images/coding/mockup(subway).jpg" alt="서브웨이">
+          </div>
+          <div class="detail">
+            <h2>서브웨이 모바일</h2>
+            <h3>웹사이트 리뉴얼 코딩</h3>
+            <ul class="infotxt">
+              <li>
+                <p>작업기간:</p>
+                <div class="line"></div>
+                <p>3Days</p>
+              </li>
+               <li>
+                <p>개발도구:</p>
+                <div class="line"></div>
+                <p>HTML5,CSS3,Javascript,Jquery</p>
+              </li>
+              <li>
+                <p>개발내용:</p>
+                <div class="line"></div>
+                <p>
+                  Planning, Design Coding<br>
+                  메인페이지 / 모바일메뉴페이지 / 로그인페이지 
+                </p>
+              </li>
+              <li>
+                <p>한마디:</p>
+                <div class="line"></div>
+                <p>
+                  로그인 페이지에서 id, pw 입력시<br>
+                  서버에 정보를 확인 요청하는 작업까지 했습니다
+                </p>
+              </li>
+            </ul>
+            <!-- 링크 바로가기 -->
+           <a id="link" href="https://ryuduckhyeon.github.io/test/project_test/" target="_blank">링크바로가기 →</a>
+          </div>        
+        </div>
+      </div>
+    </section>
+
+  <section id="contact">
+    <div class="textwrap">
+      <h2>Contact</h2>
+      <p>
+        <a href="yohan020918@naver.com" target="_blank">yohan020918@naver.com</a>
+      </p>
+      <p>
+        010-8841-6357
+      </p>
+    </div>
+
+
+    <div class="copy">
+      <div class="sns">
+          <button id="kakao">
+            <i class="fa-brands fa-kakao-talk">
+              카카오톡
+            </i>
+          </button>
+          <button id="X">
+            <i class="fa-brands fa-x-twitter">
+              X(구 트위터)
+            </i>
+          </button>
+      </div>
+      <p>2025 yourname &copy; All Right Reserved </p>
+    </div>
+    <!-- 맨위로 -->
+    <button class="top"><img src="../images/coding/btn.jpg" alt="버튼"></button>
+    
+    <div id="kakao_sns">
+      <div class="img">
+        카카오톡 QR코드
+      </div>
+      <button class="close">
+        닫기
+      </button>
+    </div>
+
+    <div id="X_sns">
+      <div class="img">
+        X(구 트위터) QR코드
+      </div>
+      <button class="close">
+        닫기
+      </button>
+    </div>
+
+  </section>
+
+  <!-- 제이쿼리 라이브러리 -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <!-- gsap 애니메이션 라이브러리-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollTrigger.min.js"></script>
+  <!-- scrolla라이브러리 연결 -->
+  <script src="../js/scrolla.jquery.min.js"></script>
+  <script src="../js/all.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/sns.js"></script>
+</body>
+</html>
